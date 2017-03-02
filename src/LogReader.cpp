@@ -80,16 +80,12 @@ void LogReader::writePng(std::string rgbDir, std::string depthDir)
         id_str = std::to_string(timestamp);
     }
     
-    std::string depthFilename, rgbFilename;
-    std::ostringstream depth_ss, rgb_ss;
-    depth_ss << depthDir;
-    rgb_ss   << rgbDir;
-    if (depthDir.find_last_of("/") != depthDir.length()-1) { depth_ss << "/"; }
-    if (rgbDir.find_last_of("/")   != rgbDir.length()-1)   { rgb_ss   << "/"; }
-    depth_ss << id_str << ".png";
-    rgb_ss   << id_str << ".png";
-    depthFilename = depth_ss.str();
-    rgbFilename = rgb_ss.str();
+    std::string depthFilename = depthDir;
+    std::string rgbFilename = rgbDir;
+    if (depthFilename.find_last_of("/") != depthFilename.length()-1) { depthFilename += "/"; }
+    if (rgbFilename.find_last_of("/")   != rgbFilename.length()-1)   { rgbFilename += "/"; }
+    depthFilename += id_str + ".png";
+    rgbFilename += id_str + ".png";
     
     cv::Mat matDepth(height, width, CV_16UC1, depth);
     cv::Mat matRGB = cv::Mat(height, width, CV_8UC3, rgb);

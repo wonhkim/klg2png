@@ -18,12 +18,11 @@ int main(int argc, char ** argv)
     {
         std::cerr 
             << std::endl
-            << "Usage: ./klg2png <input_klg_file> <output_rgb_dir> <output_depth_dir> <width> <height>"
+            << "Usage: ./klg2png <in:klg_file> <out:rgb_dir> <out:depth_dir> <width> <height>"
             << std::endl;
 
         return EXIT_FAILURE;
     }
-    
     std::string klgFilename = std::string(argv[1]);
     std::string rgbDir = std::string(argv[2]);
     std::string depthDir = std::string(argv[3]);

@@ -20,7 +20,7 @@ make
 ### Usage
 
 ```
-./klg2png <input_klg_file> <output_rgb_dir> <output_depth_dir> <width> <height>
+./klg2png <in:klg_file> <out:rgb_dir> <out:depth_dir> <width> <height>
 ```
 
 ### Reference
