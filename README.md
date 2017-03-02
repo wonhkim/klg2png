@@ -22,3 +22,7 @@ make
 ```
 ./klg2png <input_klg_file> <output_rgb_dir> <output_depth_dir> <width> <height>
 ```
+
+### Reference
+* **[ElasticFusion](https://github.com/mp3guy/ElasticFusion)**
+* **[Logger2](https://github.com/mp3guy/Logger2)**
